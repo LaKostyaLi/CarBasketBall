@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.tag != "ground")
             {
-                _isPlayerMove = false;
-                _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+                MoveStop();
             }
         }
         if (collision.gameObject.tag == "Enemy")
@@ -33,8 +32,8 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Finish")
         {
-            _speed = 0f;
-            Debug.Log("Yeah!");
+            MoveStop();
+            LevelComplete();
         }
     }
     private void MovePlayer()
@@ -42,9 +41,7 @@ public class PlayerController : MonoBehaviour
         //Move Up
         if (Input.GetKeyDown(KeyCode.W) && _isPlayerMove == false && _playerDirect != "up")
         {
-            _isPlayerMove = true;
-            _playerDirect = "up";
-            _rigidBody.constraints = RigidbodyConstraints.None;
+            MoveStart("up");
         }
         if (_isPlayerMove == true && _playerDirect == "up")
         {
@@ -53,9 +50,7 @@ public class PlayerController : MonoBehaviour
         //Move Down
         if (Input.GetKeyDown(KeyCode.S) && _isPlayerMove == false && _playerDirect != "down")
         {
-            _isPlayerMove = true;
-            _playerDirect = "down";
-            _rigidBody.constraints = RigidbodyConstraints.None;
+            MoveStart("down");
         }
         if (_isPlayerMove == true && _playerDirect == "down")
         {
@@ -64,9 +59,7 @@ public class PlayerController : MonoBehaviour
         //Move Left
         if (Input.GetKeyDown(KeyCode.A) && _isPlayerMove == false && _playerDirect != "left")
         {
-            _isPlayerMove = true;
-            _playerDirect = "left";
-            _rigidBody.constraints = RigidbodyConstraints.None;
+            MoveStart("left");
         }
         if (_isPlayerMove == true && _playerDirect == "left")
         {
@@ -75,13 +68,26 @@ public class PlayerController : MonoBehaviour
         //Move Right
         if (Input.GetKeyDown(KeyCode.D) && _isPlayerMove == false && _playerDirect != "right")
         {
-            _isPlayerMove = true;
-            _playerDirect = "right";
-            _rigidBody.constraints = RigidbodyConstraints.None;
+            MoveStart("right");
         }
         if (_isPlayerMove == true && _playerDirect == "right")
         {
             transform.Translate(0, 0, 1 * _speed * Time.deltaTime);
         }
+    }
+    private void MoveStart(string str)
+    {
+        _isPlayerMove = true;
+        _playerDirect = str;
+        _rigidBody.constraints = RigidbodyConstraints.None;
+    }
+    private void MoveStop()
+    {
+        _isPlayerMove = false;
+        _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+    private void LevelComplete()
+    {
+        Debug.Log("Yeah");
     }
 }
