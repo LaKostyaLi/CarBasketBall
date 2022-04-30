@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed = 0f;
+    [SerializeField] private AudioSource _audioSource = null;
     private bool _isPlayerMove = false;
     private string _playerDirect = "null";
     private Rigidbody _rigidBody;
@@ -29,11 +30,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("Death");
-        }
-        if (collision.gameObject.tag == "Finish")
-        {
-            MoveStop();
-            LevelComplete();
         }
     }
     private void MovePlayer()
@@ -83,11 +79,8 @@ public class PlayerController : MonoBehaviour
     }
     private void MoveStop()
     {
+        _audioSource.Play();
         _isPlayerMove = false;
         _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
-    }
-    private void LevelComplete()
-    {
-        Debug.Log("Yeah");
     }
 }
