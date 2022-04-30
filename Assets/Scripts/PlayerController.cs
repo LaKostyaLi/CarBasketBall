@@ -6,12 +6,15 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed = 0f;
     [SerializeField] private AudioSource _audioSource = null;
+    [SerializeField] private LevelManager _levelManager = null;
     private bool _isPlayerMove = false;
     private string _playerDirect = "null";
     private Rigidbody _rigidBody;
+    private Vector3 _startPosition;
 
-    private void Start()
+    void Start()
     {
+        _startPosition = transform.position;
         _rigidBody = GetComponent<Rigidbody>();
     }
     void Update()
@@ -29,7 +32,11 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Death");
+            _levelManager.TryNumber = _levelManager.TryNumber + 1;
+            MoveStop();
+            _playerDirect = "null";
+            transform.position = _startPosition;
+            Debug.Log("Death. Try again.");
         }
     }
     private void MovePlayer()
