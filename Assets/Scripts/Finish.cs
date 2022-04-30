@@ -22,5 +22,4 @@ public class Finish : MonoBehaviour
         //IronSource ADS here
         _levelNumber += 1;
     }
-
 }
