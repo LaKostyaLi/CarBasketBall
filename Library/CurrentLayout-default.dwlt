@@ -262,8 +262,8 @@ MonoBehaviour:
     y: 0
     width: 604
     height: 492
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -318,8 +318,8 @@ MonoBehaviour:
     y: 0
     width: 404
     height: 791
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8c310000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 66fbffff
       m_RenameOverlay:
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.30920365, y: -0.6434923, z: 0.32089972, w: 0.62290096}
     speed: 2
-    m_Value: {x: 0.30909988, y: -0.64327633, z: 0.32079205, w: 0.6226919}
+    m_Value: {x: -0.30920368, y: 0.6434923, z: -0.32089975, w: -0.622901}
   m_Size:
     m_Target: 4.3820186
     speed: 2
@@ -1247,20 +1247,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C\\CarBasketBall"
+  m_LastProjectPath: C:\CarBasketBall
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 394}
-    m_SelectedIDs: 50390000
-    m_LastClickedID: 14672
-    m_ExpandedIDs: 00000000de380000e0380000e2380000e4380000e6380000e8380000ea380000ec380000ee380000f0380000f2380000f4380000f6380000f8380000fa380000fc380000fe38000000390000023900000439000006390000083900000a3900000c3900001639000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 26390000
+    m_LastClickedID: 14630
+    m_ExpandedIDs: 00000000f2380000f4380000f6380000f8380000fa380000fc380000fe38000000390000023900000439000006390000083900000a3900000c3900000e39000010390000123900001439000016390000183900001a3900001c3900001e3900002039000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1288,7 +1288,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de380000e0380000e2380000e4380000e6380000e8380000ea380000ec380000ee380000f0380000f2380000f4380000f6380000f8380000fa380000fc380000fe38000000390000023900000439000006390000083900000a3900000c390000
+    m_ExpandedIDs: 00000000f2380000f4380000f6380000f8380000fa380000fc380000fe38000000390000023900000439000006390000083900000a3900000c3900000e39000010390000123900001439000016390000183900001a3900001c3900001e39000020390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f2670200a68b0200ce5a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
