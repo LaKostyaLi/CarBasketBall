@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private SaveSystem _saveSystem = null;
+   // [SerializeField] private SaveSystem _saveSystem = null;
     [SerializeField] private int _levelNumber = 1;
     [SerializeField] private int _tryNumber = 1;
 
     private void Start()
     {
-        _levelNumber = _saveSystem.gameData.Level;
-        _tryNumber = _saveSystem.gameData.Try;
+       // _levelNumber = _saveSystem.gameData.Level;
+      //  _tryNumber = _saveSystem.gameData.Try;
         DontDestroyOnLoad(gameObject);
         LevelStart();
     }
