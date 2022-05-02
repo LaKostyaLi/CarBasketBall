@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    
+    public InterstitialADS _ads;
 
     [SerializeField] private GameObject _level1;
     [SerializeField] private GameObject _level2;
@@ -20,6 +20,8 @@ public class Buttons : MonoBehaviour
 
     public void OnClickStart()
     {
+        _ads.ShowADS();
+       
         GameObject[] _gameObjects;
         _gameObjects = GameObject.FindGameObjectsWithTag("Level_1");
 
@@ -40,6 +42,7 @@ public class Buttons : MonoBehaviour
 
     public void OnClickMenu()
     {
+        _ads.ShowADS();
         _buttonStart.SetActive(true);
         _buttonMenu.SetActive(false);
         _buttonExit.SetActive(true);
