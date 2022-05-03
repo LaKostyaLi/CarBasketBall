@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             _levelManager.TryNumber = _levelManager.TryNumber + 1;
             MoveStop();
             _playerDirect = "null";
-            transform.position = _startPosition;
+            TeleportPlayerToStart();
             Debug.Log("Death. Try again.");
         }
     }
@@ -83,11 +83,16 @@ public class PlayerController : MonoBehaviour
         _isPlayerMove = true;
         _playerDirect = str;
         _rigidBody.constraints = RigidbodyConstraints.None;
+        _rigidBody.constraints = RigidbodyConstraints.FreezeRotation;
     }
     private void MoveStop()
     {
         _audioSource.Play();
         _isPlayerMove = false;
         _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+    public void TeleportPlayerToStart()
+    {
+        transform.position = _startPosition;
     }
 }

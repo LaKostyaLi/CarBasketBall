@@ -19,6 +19,7 @@ public class SaveSystem : MonoBehaviour
     {
         gameData.Level = _levelManager.LevelNumber;
         gameData.Try = _levelManager.TryNumber;
+        gameData.CurrentLevel = _levelManager._currentlevel;
         string json = JsonUtility.ToJson(gameData, true);
         PlayerPrefs.SetString("GameData", json);
     }
@@ -28,10 +29,12 @@ public class GameData
 {
     public int Level;
     public int Try;
+    public int CurrentLevel;
     public GameData()
     {
         Level = 1;
         Try = 1;
+        CurrentLevel = 0;
     }
 
 }
