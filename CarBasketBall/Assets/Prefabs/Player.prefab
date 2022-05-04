@@ -59,7 +59,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,7 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &2858598997613305939
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -112,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 15
   _audioSource: {fileID: 4625366740408130631}
-  _levelManager: {fileID: 3380678846171852851, guid: 7bb7dea5a444e444bbb572f8ef5280e5,
+  _levelManager: {fileID: 7349923997425885824, guid: 7bb7dea5a444e444bbb572f8ef5280e5,
     type: 3}
 --- !u!82 &4625366740408130631
 AudioSource:

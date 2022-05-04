@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3380678846171852850
+--- !u!1 &7349923997425885827
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3380678846171852860}
-  - component: {fileID: 3380678846171852851}
+  - component: {fileID: 7349923997425885825}
+  - component: {fileID: 7349923997425885824}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -17,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3380678846171852860
+--- !u!4 &7349923997425885825
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3380678846171852850}
+  m_GameObject: {fileID: 7349923997425885827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3380678846171852851
+--- !u!114 &7349923997425885824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3380678846171852850}
+  m_GameObject: {fileID: 7349923997425885827}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b30f2bf4763a6041b1cf9a57c9f8cef, type: 3}
@@ -45,6 +45,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelNumber: 1
   _tryNumber: 1
-  lvl1: {fileID: 5213683811537539469, guid: 3ceb0d2a879cac94cb09b6d7c798bafe, type: 3}
-  lvl2: {fileID: 5213683811537539469, guid: 7f99a407e4123f846b33979f3f6309da, type: 3}
+  _levels:
+  - {fileID: 5213683811537539469, guid: 3ceb0d2a879cac94cb09b6d7c798bafe, type: 3}
+  - {fileID: 5213683811537539469, guid: 7f99a407e4123f846b33979f3f6309da, type: 3}
+  - {fileID: 5213683811537539469, guid: c9747f85a0c4a7346bb4d5c24aaea25c, type: 3}
+  - {fileID: 5213683811537539469, guid: 9d98a19302100fe41a8608cf6f0abc33, type: 3}
+  - {fileID: 5213683811537539469, guid: 8eb997b4b37ec1a428ae9f4c0272cc6a, type: 3}
   _player: {fileID: 1188086440717529597, guid: 8ba49eccd2dd69f42a6f9df0176ceb06, type: 3}
+  _saveSystem: {fileID: 2501948575633152004, guid: 03588c8b1d4a026498c27c19a8307ce8,
+    type: 3}

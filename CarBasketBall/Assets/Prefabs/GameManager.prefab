@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bdbcf3b380f448be47f08211f8837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelManager: {fileID: 3380678846171852851, guid: 7bb7dea5a444e444bbb572f8ef5280e5,
-    type: 3}
+  _levelManager: {fileID: 0}
+  _levelCounter: {fileID: 0}
+  _tryCounter: {fileID: 0}
   gameData:
     Level: 1
     Try: 1
