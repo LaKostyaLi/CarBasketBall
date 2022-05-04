@@ -59,6 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7332635065998306618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 5.970625, z: 1}
+  m_Center: {x: 0, y: 2.4853125, z: 0}
 --- !u!82 &5466064782449344421
 AudioSource:
   m_ObjectHideFlags: 0
@@ -214,6 +216,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2920894719063903029}
     m_Modifications:
+    - target: {fileID: 3754649064682582341, guid: 2e1e65078fb46104b990555c32488a27,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5786231827547346392, guid: 2e1e65078fb46104b990555c32488a27,
         type: 3}
       propertyPath: m_Name
@@ -237,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 6559215351504342882, guid: 2e1e65078fb46104b990555c32488a27,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6559215351504342882, guid: 2e1e65078fb46104b990555c32488a27,
         type: 3}

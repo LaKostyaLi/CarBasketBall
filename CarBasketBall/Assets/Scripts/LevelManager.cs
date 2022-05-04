@@ -6,19 +6,23 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private int _levelNumber = 1;
     [SerializeField] private int _tryNumber = 1;
-    [SerializeField] private GameObject lvl1;
-    [SerializeField] private GameObject lvl2;
-    [SerializeField] private GameObject lvl3;
+    [SerializeField] private List<GameObject> _levels;
     [SerializeField] private PlayerController _player;
-    GameObject S;
-
+    [SerializeField] private SaveSystem _saveSystem;
 
     private void Start()
     {
-        // DontDestroyOnLoad(gameObject);
-        LevelStart(lvl1);
-    }
+        DontDestroyOnLoad(gameObject);
+        LevelNumber = _saveSystem.gameData.Level;
+        TryNumber = _saveSystem.gameData.Try;
+        int _currentLevelPrefab = _levelNumber % _levels.Count;
 
+        if (_currentLevelPrefab == 0)
+        {
+            _currentLevelPrefab = _levels.Count;
+        }
+        LevelStart(_levels[_currentLevelPrefab - 1]);
+    }
     public int LevelNumber
     {
         get
@@ -30,6 +34,7 @@ public class LevelManager : MonoBehaviour
             if (value >= 1)
             {
                 _levelNumber = value;
+                _saveSystem.gameData.Level = value;
             }
         }
     }
@@ -44,12 +49,13 @@ public class LevelManager : MonoBehaviour
             if (value >= 1)
             {
                 _tryNumber = value;
+                _saveSystem.gameData.Try = value;
             }
         }
     }
     public void LevelStart(GameObject lvl)
     {
-        S = Instantiate(lvl.gameObject, Vector3.zero, Quaternion.identity);
+        Instantiate(lvl.gameObject, Vector3.zero, Quaternion.identity);
     }
     public void LevelComplete()
     {
@@ -58,10 +64,5 @@ public class LevelManager : MonoBehaviour
         //IronSource ADS here
         LevelNumber = LevelNumber + 1;
         TryNumber = 1;
-        //level destroy + tp player to 0 0 0
-        
-        Destroy(gameObject);
-        Destroy(lvl1);
-        LevelStart(lvl2);
     }
 }

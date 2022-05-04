@@ -11,10 +11,15 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            StartCoroutine(PlayerOnFinish());
+
+        }
+        IEnumerator PlayerOnFinish()
+        {
             _audioSource.Play();
+            yield return new WaitForSeconds(0.9f);
             FindObjectOfType<Level>().LoadNextLevel();
-            /*_levelManager.LevelComplete();
-            _levelManager = null;*/
+            _levelManager.LevelComplete();
         }
     }
 }

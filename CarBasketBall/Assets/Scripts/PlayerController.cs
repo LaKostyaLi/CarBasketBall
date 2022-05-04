@@ -7,10 +7,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float _speed = 0f;
     [SerializeField] private AudioSource _audioSource = null;
+    [SerializeField] private LevelManager _levelManager = null;
     private bool _isPlayerMove = false;
     private string _playerDirect = "null";
     private Rigidbody _rigidBody;
-    private Vector3 _startPosition = Vector3.zero;
+    private Vector3 _startPosition = new Vector3(0, 0.5f, 0);
 
     void Start()
     {
@@ -34,7 +35,11 @@ public class PlayerController : MonoBehaviour
             MoveStop();
             _playerDirect = "null";
             transform.position = _startPosition;
+            transform.rotation = Quaternion.identity;
             Debug.Log("Death. Try again.");
+            _levelManager.TryNumber += 1;
+
+
         }
     }
     private void MovePlayer()
