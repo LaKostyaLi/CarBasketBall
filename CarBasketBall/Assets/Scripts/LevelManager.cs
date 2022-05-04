@@ -34,7 +34,6 @@ public class LevelManager : MonoBehaviour
             if (value >= 1)
             {
                 _levelNumber = value;
-                _saveSystem.gameData.Level = value;
             }
         }
     }
@@ -49,7 +48,6 @@ public class LevelManager : MonoBehaviour
             if (value >= 1)
             {
                 _tryNumber = value;
-                _saveSystem.gameData.Try = value;
             }
         }
     }
