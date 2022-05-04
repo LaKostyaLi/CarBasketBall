@@ -12,7 +12,9 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             _audioSource.Play();
-            _levelManager.LevelComplete();
+            FindObjectOfType<Level>().LoadNextLevel();
+            /*_levelManager.LevelComplete();
+            _levelManager = null;*/
         }
     }
 }

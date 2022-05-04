@@ -6,11 +6,17 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private int _levelNumber = 1;
     [SerializeField] private int _tryNumber = 1;
+    [SerializeField] private GameObject lvl1;
+    [SerializeField] private GameObject lvl2;
+    [SerializeField] private GameObject lvl3;
+    [SerializeField] private PlayerController _player;
+    GameObject S;
+
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
-        LevelStart();
+        // DontDestroyOnLoad(gameObject);
+        LevelStart(lvl1);
     }
 
     public int LevelNumber
@@ -41,9 +47,9 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
-    public void LevelStart()
+    public void LevelStart(GameObject lvl)
     {
-        //здесь выгрузка левела в зав-ти от _levelNumber
+        S = Instantiate(lvl.gameObject, Vector3.zero, Quaternion.identity);
     }
     public void LevelComplete()
     {
@@ -53,6 +59,9 @@ public class LevelManager : MonoBehaviour
         LevelNumber = LevelNumber + 1;
         TryNumber = 1;
         //level destroy + tp player to 0 0 0
-        LevelStart();
+        
+        Destroy(gameObject);
+        Destroy(lvl1);
+        LevelStart(lvl2);
     }
 }

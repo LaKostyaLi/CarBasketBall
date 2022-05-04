@@ -702,10 +702,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 593a96a3-a707-456f-a42c-d803fa972763
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: CarBasketBall
+  organizationId: mbuzui
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

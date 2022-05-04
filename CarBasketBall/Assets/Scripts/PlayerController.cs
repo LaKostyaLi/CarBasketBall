@@ -10,11 +10,10 @@ public class PlayerController : MonoBehaviour
     private bool _isPlayerMove = false;
     private string _playerDirect = "null";
     private Rigidbody _rigidBody;
-    private Vector3 _startPosition;
+    private Vector3 _startPosition = Vector3.zero;
 
     void Start()
     {
-        _startPosition = transform.position;
         _rigidBody = GetComponent<Rigidbody>();
     }
     void Update()
@@ -88,5 +87,9 @@ public class PlayerController : MonoBehaviour
         _audioSource.Play();
         _isPlayerMove = false;
         _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+    public void TeleportToStart()
+    {
+        transform.position = _startPosition;
     }
 }

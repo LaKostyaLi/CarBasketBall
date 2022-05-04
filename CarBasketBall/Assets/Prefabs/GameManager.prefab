@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7952813054818184877}
-  - component: {fileID: 8919361939416818428}
   - component: {fileID: 2501948575633152004}
   m_Layer: 0
   m_Name: GameManager
@@ -32,20 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8919361939416818428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7991462445418041894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b30f2bf4763a6041b1cf9a57c9f8cef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelNumber: 1
-  _tryNumber: 1
 --- !u!114 &2501948575633152004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bdbcf3b380f448be47f08211f8837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelManager: {fileID: 8919361939416818428}
+  _levelManager: {fileID: 3380678846171852851, guid: 7bb7dea5a444e444bbb572f8ef5280e5,
+    type: 3}
   gameData:
     Level: 1
     Try: 1
